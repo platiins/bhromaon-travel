@@ -1,4 +1,5 @@
-@use "index" as *;
+@use "variables" as *;
+@use "mixins" as *;
 
 @font-face {
   font-family: "Josefin Sans";
@@ -20,37 +21,23 @@
   font-weight: 400;
 }
 
-:root {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
-}
-
+// NAV BAR
 .main-nav {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
+  @include flex-center(space-between, row);
   padding: 30px 200px;
   background-color: $detailsColor;
-  color: white;
-  position: relative;
-  left: 0;
-  top: 720px;
 
   .main-nav__logo {
-    font-weight: 700;
-    font-size: 24px;
-    letter-spacing: 2.4px;
+    @include primary-font(24px, 700, 2.4px, inherit);
+    margin-right: 50px;
   }
 
   ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @include flex-center(space-evenly, row);
+    @include secondary-font(14px, 1px, center);
     gap: 50px;
     list-style: none;
-    font-family: "Aleo", serif;
-    font-weight: 400;
-    font-size: 14px;
+
     li {
       a {
         color: inherit;
@@ -60,12 +47,78 @@
   }
 }
 
+// FIRST PAGE CONTENT
+
 .bg-img__first {
-  width: 100vw;
+  @include bg-image(820px, url(../assets/images/bg-image-first.png));
+}
+
+.section__search {
+  @include flex-center(center, column);
   height: 820px;
-  background-image: url(../assets/images/bg-image-first.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
+  h1 {
+    @include primary-font(48px, 700, 4.8px, center);
+    margin-bottom: 10px;
+  }
+  h2 {
+    @include primary-font(22px, 400, 6.82px, center);
+    margin-bottom: 48px;
+  }
+
+  form {
+    @include flex-center(center, row);
+    // min-width: 700px;
+    width: 45%;
+    height: 65px;
+    border: $inputBorder;
+    margin-bottom: 110px;
+
+    label {
+      display: none;
+    }
+
+    .search-bar {
+      width: 70%;
+      height: 100%;
+      border: $inputBorder;
+      box-sizing: border-box;
+
+      @include primary-font(14px, 400, 2.8px, center);
+      color: #999999;
+
+      ::placeholder,
+      ::-moz-placeholder {
+        opacity: 1;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .search-bar__btn {
+      width: 30%;
+      height: 100%;
+      border: $inputBorder;
+      background-color: $detailsColor;
+
+      @include secondary-font(14px, 1.4px, center);
+
+      .fa-magnifying-glass {
+        margin-left: 10px;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: darken($detailsColor, 30%);
+      }
+    }
+  }
+
+  .scroll-down {
+    @include primary-font(14px, 400, 2.8px, center);
+
+    &__icon {
+      margin-top: 10px;
+    }
+  }
 }

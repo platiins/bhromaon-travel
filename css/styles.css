@@ -13,36 +13,36 @@
   src: url(../assets/fonts/Aleo/static/Aleo-Regular.ttf) format(truetype);
   font-weight: 400;
 }
-:root {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
-}
-
 .main-nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-content: center;
+  flex-direction: row;
   padding: 30px 200px;
   background-color: #5474fd;
-  color: white;
-  position: relative;
-  left: 0;
-  top: 720px;
 }
 .main-nav .main-nav__logo {
-  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
   font-size: 24px;
+  font-weight: 700;
   letter-spacing: 2.4px;
+  text-align: inherit;
+  margin-right: 50px;
 }
 .main-nav ul {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  gap: 50px;
-  list-style: none;
+  justify-content: space-evenly;
+  flex-direction: row;
   font-family: "Aleo", serif;
+  color: #ffffff;
   font-weight: 400;
   font-size: 14px;
+  letter-spacing: 1px;
+  text-align: center;
+  gap: 50px;
+  list-style: none;
 }
 .main-nav ul li a {
   color: inherit;
@@ -59,4 +59,93 @@
   z-index: -1;
 }
 
-/*# sourceMappingURL=styles.css.map */
+.section__search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 820px;
+}
+.section__search h1 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 4.8px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.section__search h2 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 6.82px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+.section__search form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 45%;
+  height: 65px;
+  border: solid #ffffff 2px;
+  margin-bottom: 110px;
+}
+.section__search form label {
+  display: none;
+}
+.section__search form .search-bar {
+  width: 70%;
+  height: 100%;
+  border: solid #ffffff 2px;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2.8px;
+  text-align: center;
+  color: #999999;
+}
+.section__search form .search-bar ::-moz-placeholder {
+  opacity: 1;
+}
+.section__search form .search-bar ::placeholder,
+.section__search form .search-bar ::-moz-placeholder {
+  opacity: 1;
+}
+.section__search form .search-bar:focus {
+  outline: none;
+}
+.section__search form .search-bar__btn {
+  width: 30%;
+  height: 100%;
+  border: solid #ffffff 2px;
+  background-color: #5474fd;
+  font-family: "Aleo", serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  text-align: center;
+}
+.section__search form .search-bar__btn .fa-magnifying-glass {
+  margin-left: 10px;
+}
+.section__search form .search-bar__btn:hover, .section__search form .search-bar__btn:focus {
+  background-color: #0224b6;
+}
+.section__search .scroll-down {
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2.8px;
+  text-align: center;
+}
+.section__search .scroll-down__icon {
+  margin-top: 10px;
+}/*# sourceMappingURL=styles.css.map */
