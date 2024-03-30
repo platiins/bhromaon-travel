@@ -89,6 +89,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  min-width: 700px;
   width: 45%;
   height: 65px;
   border: solid #ffffff 2px;

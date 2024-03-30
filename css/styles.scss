@@ -67,7 +67,7 @@
 
   form {
     @include flex-center(center, row);
-    // min-width: 700px;
+    min-width: 700px;
     width: 45%;
     height: 65px;
     border: $inputBorder;
