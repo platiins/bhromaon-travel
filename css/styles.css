@@ -236,4 +236,37 @@
   position: relative;
   bottom: 0;
   left: 90px;
+}
+
+.how-works {
+  background-color: #333333;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 340px;
+  width: 100vw;
+  gap: 170px;
+}
+.how-works section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #333333;
+  z-index: 2;
+}
+.how-works section p {
+  font-family: "Aleo", serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 36px;
+  letter-spacing: inherit;
+  text-align: center;
+  margin-top: 30px;
+}
+.how-works .arc-line {
+  position: absolute;
+  bottom: 200px;
 }/*# sourceMappingURL=styles.css.map */
