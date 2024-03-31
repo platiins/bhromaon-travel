@@ -202,14 +202,6 @@
   text-align: start;
   margin-bottom: 20px;
 }
-.bg-img__second .choose-us-grid__text p {
-  font-family: "Josefin Sans", sans-serif;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 1.6px;
-  text-align: start;
-}
 .bg-img__second .choose-us-grid__text button {
   width: 228px;
   height: 65px;
@@ -377,4 +369,104 @@
 .fourth-page .spain-article .book-btn:hover {
   background-color: #0224b6;
   cursor: pointer;
+}
+
+.testimonial {
+  width: 100vw;
+  height: 730px;
+  background-image: url(../assets/images/testimonial.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.testimonial h2 {
+  font-family: "Aleo", serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 36px;
+  letter-spacing: inherit;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.testimonial__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: inherit;
+  text-align: start;
+  margin: 0 200px;
+  background-color: #333333;
+  line-height: 26px;
+}
+.testimonial__content img {
+  width: 50%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.testimonial__content article {
+  padding: 30px 30px 30px 50px;
+  width: 50%;
+}
+.testimonial__content article h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.testimonial__content article .fa-quote-left {
+  color: #5474fd;
+  font-size: 36px;
+  vertical-align: baseline;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  align-items: end;
+  height: 270px;
+  width: 100vw;
+  background-color: #232323;
+  color: #ffffff;
+}
+.footer__container {
+  margin-bottom: 50px;
+}
+.footer__container h5 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 3.36px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.footer__container p {
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.footer__container .social-media {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  gap: 15px;
+}
+.footer__container .social-media .fa-linkedin-in {
+  color: #5474fd;
 }/*# sourceMappingURL=styles.css.map */

@@ -159,10 +159,6 @@
         margin-bottom: 20px;
       }
 
-      p {
-        @include primary-font(16px, 400, 1.6px, start);
-      }
-
       button {
         @include btn-style(20px 0);
       }
@@ -227,5 +223,83 @@
 
   .spain-article {
     @include article-style(0 300px 0 0);
+  }
+}
+
+// TESTIMONIAL
+
+.testimonial {
+  @include bg-image(730px, url(../assets/images/testimonial.png));
+  @include flex-center(center, column);
+
+  h2 {
+    @include secondary-font(36px, inherit, center);
+    margin-bottom: 70px;
+  }
+
+  &__content {
+    @include flex-center(center, row);
+    @include primary-font(16px, 400, inherit, start);
+    margin: 0 200px;
+    background-color: #333333;
+    line-height: 26px;
+
+    img {
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    article {
+      padding: 30px 30px 30px 50px;
+      width: 50%;
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      .fa-quote-left {
+        color: $detailsColor;
+        font-size: 36px;
+        vertical-align: baseline;
+      }
+    }
+  }
+}
+
+// FOOTER
+
+.footer {
+  @include flex-center(center, row);
+  align-items: end;
+
+  height: 270px;
+  width: 100vw;
+
+  background-color: #232323;
+  color: #ffffff;
+
+  &__container {
+    margin-bottom: 50px;
+
+    h5 {
+      @include primary-font(24px, 700, 3.36px, center);
+      margin-bottom: 10px;
+    }
+
+    p {
+      @include primary-font(16px, 400, 1.6px, center);
+      margin-bottom: 20px;
+    }
+
+    .social-media {
+      @include flex-center(space-evenly, row);
+      gap: 15px;
+
+      .fa-linkedin-in {
+        color: $detailsColor;
+      }
+    }
   }
 }
