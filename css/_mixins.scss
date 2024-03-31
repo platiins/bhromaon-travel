@@ -49,3 +49,31 @@
     cursor: pointer;
   }
 }
+
+@mixin article-style($articleMargins) {
+
+  background-color: rgba(35, 35, 35, 0.9);
+  max-width: 550px;
+  margin: $articleMargins;
+  padding: 50px 30px;
+
+  @include primary-font(20px, 400, inherit, start);
+
+  h4 {
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .book-btn {
+    @include btn-style(50px 0 0);
+  }
+}

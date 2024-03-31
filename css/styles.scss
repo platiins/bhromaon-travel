@@ -210,36 +210,22 @@
   }
 }
 
-// 3RD PAGE
+// 3RD AND 4TH PAGE
 
 .third-page {
   @include bg-image(700px, url(../assets/images/bg-image-3rd.png));
   @include flex-center(start, row);
 
-  &__article {
-    background-color: rgba(35, 35, 35, 0.9);
-    max-width: 550px;
-    margin-left: 300px;
-    padding: 50px 30px;
+  .spain-article {
+    @include article-style(0 0 0 300px);
+  }
+}
 
-    @include primary-font(20px, 400, inherit, start);
+.fourth-page {
+  @include bg-image(700px, url(../assets/images/bg-image-fourth.png));
+  @include flex-center(end, row);
 
-    h4 {
-      letter-spacing: 1.5px;
-      margin-bottom: 30px;
-    }
-
-    h3 {
-      margin-bottom: 30px;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 26px;
-    }
-
-    .book-btn {
-      @include btn-style(50px 0 0);
-    }
+  .spain-article {
+    @include article-style(0 300px 0 0);
   }
 }
