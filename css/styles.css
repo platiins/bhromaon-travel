@@ -20,6 +20,7 @@
   flex-direction: row;
   padding: 30px 200px;
   background-color: #5474fd;
+  position: relative;
 }
 .main-nav .main-nav__logo {
   font-family: "Josefin Sans", sans-serif;
@@ -90,7 +91,6 @@
   justify-content: center;
   flex-direction: row;
   min-width: 700px;
-  width: 45%;
   height: 65px;
   border: solid #ffffff 2px;
   margin-bottom: 110px;
@@ -103,6 +103,7 @@
   height: 100%;
   border: solid #ffffff 2px;
   box-sizing: border-box;
+  overflow: hidden;
   font-family: "Josefin Sans", sans-serif;
   color: #ffffff;
   font-size: 14px;
@@ -138,6 +139,7 @@
 }
 .section__search form .search-bar__btn:hover, .section__search form .search-bar__btn:focus {
   background-color: #0224b6;
+  cursor: pointer;
 }
 .section__search .scroll-down {
   font-family: "Josefin Sans", sans-serif;
@@ -149,4 +151,89 @@
 }
 .section__search .scroll-down__icon {
   margin-top: 10px;
+}
+
+.bg-img__second {
+  width: 100vw;
+  height: 685px;
+  background-image: url(../assets/images/bg-image-second.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 80px;
+}
+.bg-img__second .choose-us-grid {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px 50px;
+  align-items: center;
+  justify-self: center;
+}
+.bg-img__second .choose-us-grid__text {
+  grid-area: 1/1/3/2;
+  margin-top: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+  text-align: start;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.bg-img__second .choose-us-grid__text h3 {
+  font-family: "Aleo", serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 36px;
+  letter-spacing: inherit;
+  text-align: start;
+  margin-bottom: 20px;
+}
+.bg-img__second .choose-us-grid__text p {
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+  text-align: start;
+}
+.bg-img__second .choose-us-grid__text button {
+  width: 228px;
+  height: 65px;
+  background-color: #5474fd;
+  border: none;
+  font-family: "Aleo", serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1.2px;
+  text-align: center;
+  margin: 20px 0;
+}
+.bg-img__second .choose-us-grid__text button:hover {
+  background-color: #0224b6;
+  cursor: pointer;
+}
+.bg-img__second .choose-us-grid__img-1 {
+  grid-area: 1/2/2/3;
+  margin-right: 90px;
+}
+.bg-img__second .choose-us-grid__img-2 {
+  grid-area: 2/2/3/3;
+  position: relative;
+  bottom: 0;
+  left: 90px;
 }/*# sourceMappingURL=styles.css.map */

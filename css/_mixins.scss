@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 @mixin flex-center($justifyContent, $direction) {
   display: flex;
   align-items: center;
@@ -31,4 +33,19 @@
   font-size: $fontSize;
   letter-spacing: $letterSpacing;
   text-align: $textAlign;
+}
+
+@mixin btn-style($btnMargins) {
+  width: 228px;
+  height: 65px;
+
+  background-color: $detailsColor;
+  border: none;
+  @include secondary-font(16px, 1.2px, center);
+  margin: $btnMargins;
+
+  &:hover {
+    background-color: darken($detailsColor, 30%);
+    cursor: pointer;
+  }
 }
