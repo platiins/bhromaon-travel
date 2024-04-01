@@ -247,13 +247,21 @@ body {
 }
 .bg-img__second .choose-us-grid__img-1 {
   grid-area: 1/2/2/3;
+  border: solid 3px transparent;
   margin-right: 90px;
+}
+.bg-img__second .choose-us-grid__img-1:hover {
+  border: #5474fd 3px solid;
 }
 .bg-img__second .choose-us-grid__img-2 {
   grid-area: 2/2/3/3;
+  border: solid 2px transparent;
   position: relative;
   bottom: 0;
   left: 90px;
+}
+.bg-img__second .choose-us-grid__img-2:hover {
+  border: #5474fd 3px solid;
 }
 
 .how-works {
@@ -275,6 +283,9 @@ body {
   background-color: #333333;
   z-index: 2;
 }
+.how-works section img {
+  transition-duration: 500ms;
+}
 .how-works section p {
   font-family: "Aleo", serif;
   color: #ffffff;
@@ -282,7 +293,15 @@ body {
   font-size: 36px;
   letter-spacing: inherit;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 40px;
+}
+.how-works section:hover img {
+  transform: scale(1.5);
+  transition-duration: 500ms;
+}
+.how-works section:hover p {
+  color: #5474fd;
+  transition-duration: 500ms;
 }
 .how-works .arc-line {
   position: absolute;

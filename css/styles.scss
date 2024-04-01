@@ -195,16 +195,26 @@ body {
 
     &__img-1 {
       grid-area: 1 / 2 / 2 / 3;
+      border: solid 3px transparent;
 
       margin-right: 90px;
+
+      &:hover {
+        border: $detailsColor 3px solid;
+      }
     }
 
     &__img-2 {
       grid-area: 2 / 2 / 3 / 3;
+      border: solid 2px transparent;
 
       position: relative;
       bottom: 0;
       left: 90px;
+
+      &:hover {
+        border: $detailsColor 3px solid;
+      }
     }
   }
 }
@@ -223,9 +233,23 @@ body {
     background-color: #333333;
     z-index: 2;
 
+    img {
+      transition-duration: 500ms;
+    }
+
     p {
       @include secondary-font(36px, inherit, center);
-      margin-top: 30px;
+      margin-top: 40px;
+    }
+
+    &:hover img {
+      transform: scale(1.5);
+      transition-duration: 500ms;
+    }
+
+    &:hover p {
+      color: $detailsColor;
+      transition-duration: 500ms;
     }
   }
 
