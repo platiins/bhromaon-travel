@@ -21,6 +21,10 @@
   font-weight: 400;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 // NAV BAR
 .main-nav {
   @include flex-center(space-between, row);

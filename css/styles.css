@@ -13,6 +13,10 @@
   src: url(../assets/fonts/Aleo/static/Aleo-Regular.ttf) format(truetype);
   font-weight: 400;
 }
+body {
+  overflow-x: hidden;
+}
+
 .main-nav {
   display: flex;
   align-items: center;
