@@ -25,6 +25,87 @@ body {
   overflow-x: hidden;
 }
 
+// FIRST PAGE CONTENT
+
+.bg-img__first {
+  @include bg-image(820px, url(../assets/images/bg-image-first.png));
+  height: 820px;
+}
+
+.section__search {
+  @include flex-center(center, column);
+  height: 100%;
+
+  h1 {
+    @include primary-font(48px, 700, 4.8px, center);
+    margin-bottom: 10px;
+  }
+  h2 {
+    @include primary-font(22px, 400, 6.82px, center);
+    margin-bottom: 48px;
+  }
+
+  form {
+    @include flex-center(center, row);
+    width: 50%;
+    height: 65px;
+    border: $inputBorder;
+    margin-bottom: 110px;
+
+    label {
+      display: none;
+    }
+
+    .search-bar {
+      width: 70%;
+      height: 100%;
+      border: $inputBorder;
+      box-sizing: border-box;
+      outline: none;
+
+      overflow: hidden;
+
+      @include primary-font(14px, 400, 2.8px, center);
+      color: #999999;
+
+      ::placeholder,
+      ::-moz-placeholder {
+        opacity: 1;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .search-bar__btn {
+      width: 30%;
+      height: 100%;
+      border: none;
+      background-color: $detailsColor;
+
+      @include secondary-font(14px, 1.4px, center);
+
+      .fa-magnifying-glass {
+        margin-left: 10px;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: darken($detailsColor, 30%);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .scroll-down {
+    @include primary-font(14px, 400, 2.8px, center);
+
+    &__icon {
+      margin-top: 10px;
+    }
+  }
+}
+
 // NAV BAR
 .main-nav {
   @include flex-center(space-between, row);
@@ -48,85 +129,6 @@ body {
         color: inherit;
         text-decoration: none;
       }
-    }
-  }
-}
-
-// FIRST PAGE CONTENT
-
-.bg-img__first {
-  @include bg-image(820px, url(../assets/images/bg-image-first.png));
-}
-
-.section__search {
-  @include flex-center(center, column);
-  height: 820px;
-
-  h1 {
-    @include primary-font(48px, 700, 4.8px, center);
-    margin-bottom: 10px;
-  }
-  h2 {
-    @include primary-font(22px, 400, 6.82px, center);
-    margin-bottom: 48px;
-  }
-
-  form {
-    @include flex-center(center, row);
-    min-width: 700px;
-    height: 65px;
-    border: $inputBorder;
-    margin-bottom: 110px;
-
-    label {
-      display: none;
-    }
-
-    .search-bar {
-      width: 70%;
-      height: 100%;
-      border: $inputBorder;
-      box-sizing: border-box;
-
-      overflow: hidden;
-
-      @include primary-font(14px, 400, 2.8px, center);
-      color: #999999;
-
-      ::placeholder,
-      ::-moz-placeholder {
-        opacity: 1;
-      }
-      &:focus {
-        outline: none;
-      }
-    }
-
-    .search-bar__btn {
-      width: 30%;
-      height: 100%;
-      border: $inputBorder;
-      background-color: $detailsColor;
-
-      @include secondary-font(14px, 1.4px, center);
-
-      .fa-magnifying-glass {
-        margin-left: 10px;
-      }
-
-      &:hover,
-      &:focus {
-        background-color: darken($detailsColor, 30%);
-        cursor: pointer;
-      }
-    }
-  }
-
-  .scroll-down {
-    @include primary-font(14px, 400, 2.8px, center);
-
-    &__icon {
-      margin-top: 10px;
     }
   }
 }
@@ -247,6 +249,7 @@ body {
     margin: 0 200px;
     background-color: #333333;
     line-height: 26px;
+    max-width: 1500px;
 
     img {
       width: 50%;
@@ -304,6 +307,151 @@ body {
       .fa-linkedin-in {
         color: $detailsColor;
       }
+    }
+  }
+}
+
+// RESPONSIVNESS
+
+// FOR SCREEN <1100PX WIDE
+
+@media (max-width: 1100px) {
+  // FIRST PAGE
+  .bg-img__first {
+    height: 600px;
+
+    h1 {
+      font-size: 35px;
+      margin-top: 50px;
+    }
+
+    h2 {
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      height: 50px;
+      margin-bottom: 100px;
+      width: 70%;
+
+      .search-bar {
+        font-size: 10px;
+      }
+
+      .search-bar__btn {
+        font-size: 10px;
+      }
+
+      .fa-magnifying-glass {
+        display: none;
+      }
+    }
+  }
+
+  // NAV BAR
+  .main-nav {
+    display: block;
+    padding: 10px 30px;
+
+    .main-nav__logo {
+      @include primary-font(24px, 700, 2.4px, center);
+      line-height: 40px;
+      margin: 0 10px;
+    }
+
+    ul {
+      display: none;
+    }
+  }
+
+  // SECOND PAGE - WHY CHOOSE US
+
+  .bg-img__second {
+    margin-top: 30px;
+    height: 600px;
+
+    .choose-us-grid {
+      @include flex-center(center, row);
+
+      &__text {
+        margin: 30px 20px 10px;
+        font-size: 13px;
+
+        @include flex-center(space-between, column);
+        align-items: center;
+        gap: 20px;
+
+        h3 {
+          @include secondary-font(27px, inherit, center);
+        }
+
+        p {
+          font-size: 13px;
+        }
+
+        button {
+          @include btn-style(20px 0 0 0);
+          width: 180px;
+          height: 50px;
+          font-size: 13px;
+        }
+      }
+
+      &__img-1 {
+        display: none;
+      }
+
+      &__img-2 {
+        display: none;
+      }
+    }
+  }
+
+  // SECOND PAGE - HOW IT WORKS
+
+  .how-works {
+    // background-color: #333333;
+    // position: relative;
+
+    @include flex-center(center, row);
+    height: 250px;
+    // width: 100vw;
+    gap: 50px;
+
+    section {
+      margin: 15px 25px;
+
+      img {
+        width: 50px;
+      }
+
+      p {
+        font-size: 16px;
+        // margin-top: 30px;
+      }
+    }
+
+    .arc-line {
+      display: none;
+    }
+  }
+}
+
+// FOR SCREEN <600PX WIDE
+
+@media (max-width: 600px) {
+  // SECOND PAGE
+
+  .how-works {
+    gap: 5px;
+    height: 200px;
+
+    img {
+      width: 30px;
+    }
+    p {
+      font-size: 13px;
     }
   }
 }
