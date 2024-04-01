@@ -513,6 +513,13 @@ body {
   flex-direction: row;
   gap: 15px;
 }
+.footer__container .social-media__icon {
+  transition-duration: 200ms;
+}
+.footer__container .social-media__icon:hover {
+  transform: scale(1.5);
+  transition-duration: 200ms;
+}
 .footer__container .social-media .fa-linkedin-in {
   color: #5474fd;
 }

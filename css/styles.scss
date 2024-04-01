@@ -351,6 +351,15 @@ body {
       @include flex-center(space-evenly, row);
       gap: 15px;
 
+      &__icon {
+        transition-duration: 200ms;
+      }
+
+      &__icon:hover {
+        transform: scale(1.5);
+        transition-duration: 200ms;
+      }
+
       .fa-linkedin-in {
         color: $detailsColor;
       }
