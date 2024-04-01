@@ -523,7 +523,7 @@ body {
   }
   .bg-img__second {
     margin-top: 30px;
-    height: 600px;
+    height: 650px;
   }
   .bg-img__second .choose-us-grid {
     display: flex;
@@ -545,7 +545,7 @@ body {
     font-family: "Aleo", serif;
     color: #ffffff;
     font-weight: 400;
-    font-size: 27px;
+    font-size: 23px;
     letter-spacing: inherit;
     text-align: center;
   }
@@ -598,6 +598,86 @@ body {
   .how-works .arc-line {
     display: none;
   }
+  .third-page,
+  .fourth-page {
+    justify-content: center;
+  }
+  .third-page .spain-article,
+  .fourth-page .spain-article {
+    background-color: rgba(35, 35, 35, 0.9);
+    max-width: 550px;
+    margin: 30px;
+    padding: 50px 30px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: inherit;
+    text-align: start;
+  }
+  .third-page .spain-article h4,
+  .fourth-page .spain-article h4 {
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+  }
+  .third-page .spain-article h3,
+  .fourth-page .spain-article h3 {
+    margin-bottom: 30px;
+  }
+  .third-page .spain-article p,
+  .fourth-page .spain-article p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .third-page .spain-article .book-btn,
+  .fourth-page .spain-article .book-btn {
+    width: 228px;
+    height: 65px;
+    background-color: #5474fd;
+    border: none;
+    font-family: "Aleo", serif;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    text-align: center;
+    margin: 50px 0 0;
+  }
+  .third-page .spain-article .book-btn:hover,
+  .fourth-page .spain-article .book-btn:hover {
+    background-color: #0224b6;
+    cursor: pointer;
+  }
+  .testimonial {
+    height: 600px;
+  }
+  .testimonial h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .testimonial__content {
+    margin: 30px 50px;
+    max-width: 700px;
+  }
+  .testimonial__content img {
+    display: none;
+  }
+  .testimonial__content article {
+    padding: 30px;
+    width: 100%;
+  }
+  .testimonial__content article .fa-quote-left {
+    font-size: 20px;
+  }
+  .footer {
+    height: 200px;
+  }
+  .footer h5 {
+    font-size: 15px;
+  }
+  .footer p {
+    font-size: 10px;
+  }
 }
 @media (max-width: 600px) {
   .how-works {
@@ -609,5 +689,9 @@ body {
   }
   .how-works p {
     font-size: 13px;
+  }
+  .testimonial__content {
+    margin: 20px 0 0;
+    width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */

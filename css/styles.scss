@@ -369,7 +369,7 @@ body {
 
   .bg-img__second {
     margin-top: 30px;
-    height: 600px;
+    height: 650px;
 
     .choose-us-grid {
       @include flex-center(center, row);
@@ -383,7 +383,7 @@ body {
         gap: 20px;
 
         h3 {
-          @include secondary-font(27px, inherit, center);
+          @include secondary-font(23px, inherit, center);
         }
 
         p {
@@ -436,6 +436,58 @@ body {
       display: none;
     }
   }
+
+  // THIRD AND FOURTH PAGES
+
+  .third-page,
+  .fourth-page {
+    justify-content: center;
+
+    .spain-article {
+      @include article-style(30px);
+    }
+  }
+
+  // TESTIMONIAL
+
+  .testimonial {
+    height: 600px;
+
+    h2 {
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+
+    &__content {
+      margin: 30px 50px;
+      max-width: 700px;
+
+      img {
+        display: none;
+      }
+
+      article {
+        padding: 30px;
+        width: 100%;
+
+        .fa-quote-left {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    height: 200px;
+
+    h5 {
+      font-size: 15px;
+    }
+
+    p {
+      font-size: 10px;
+    }
+  }
 }
 
 // FOR SCREEN <600PX WIDE
@@ -453,5 +505,12 @@ body {
     p {
       font-size: 13px;
     }
+  }
+
+  // TESTIMONIAL
+
+  .testimonial__content {
+    margin: 20px 0 0;
+    width: 100%;
   }
 }
